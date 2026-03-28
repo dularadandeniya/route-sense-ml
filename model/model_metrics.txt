@@ -1,0 +1,16 @@
+=== Random Split Metrics ===
+MAE: 0.0446
+RMSE: 0.0550
+R2: 0.0689
+MAPE: 4.16%
+
+=== 5-Fold Cross-Validation ===
+CV R2 scores: [-0.08254773 -0.01848531  0.01746466  0.01580965 -0.07341832]
+CV R2 mean: -0.0282
+CV R2 std: 0.0427
+
+=== Time-Based Split Metrics ===
+MAE: 0.0435
+RMSE: 0.0537
+R2: -0.0070
+MAPE: 4.08%
