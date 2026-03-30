@@ -44,7 +44,7 @@ df["is_evening_peak"] = df["hour"].between(17, 19).astype(int)
 
 # target traffic factor
 df["traffic_factor"] = (
-    df["TravelTimeLivePer10KmsMins"] / df["TravelTimeHistoricPer10KmsMins"]
+        df["TravelTimeLivePer10KmsMins"] / df["TravelTimeHistoricPer10KmsMins"]
 ).clip(lower=1.0)
 
 # optional columns if present
@@ -54,34 +54,34 @@ for c in ["JamsCount", "JamsLengthInKms", "JamsDelay"]:
         optional_numeric.append(c)
 
 feature_columns = [
-    "City",
-    "TrafficIndexLive",
-    "TrafficIndexWeekAgo",
-    "TravelTimeHistoricPer10KmsMins",
-    "MinsDelay",
-    "hour",
-    "day_of_week",
-    "month",
-    "is_weekend",
-    "is_morning_peak",
-    "is_evening_peak",
-] + optional_numeric
+                      "City",
+                      "TrafficIndexLive",
+                      "TrafficIndexWeekAgo",
+                      "TravelTimeHistoricPer10KmsMins",
+                      "MinsDelay",
+                      "hour",
+                      "day_of_week",
+                      "month",
+                      "is_weekend",
+                      "is_morning_peak",
+                      "is_evening_peak",
+                  ] + optional_numeric
 
 X = df[feature_columns]
 y = df["traffic_factor"]
 
 numeric_features = [
-    "TrafficIndexLive",
-    "TrafficIndexWeekAgo",
-    "TravelTimeHistoricPer10KmsMins",
-    "MinsDelay",
-    "hour",
-    "day_of_week",
-    "month",
-    "is_weekend",
-    "is_morning_peak",
-    "is_evening_peak",
-] + optional_numeric
+                       "TrafficIndexLive",
+                       "TrafficIndexWeekAgo",
+                       "TravelTimeHistoricPer10KmsMins",
+                       "MinsDelay",
+                       "hour",
+                       "day_of_week",
+                       "month",
+                       "is_weekend",
+                       "is_morning_peak",
+                       "is_evening_peak",
+                   ] + optional_numeric
 
 categorical_features = ["City"]
 
