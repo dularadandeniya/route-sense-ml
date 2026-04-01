@@ -1,6 +1,6 @@
 fastapi
 uvicorn
-pandas
-scikit-learn
+pandas==2.x.x
+scikit-learn==1.6.1
 joblib
 xgboost
